@@ -29,7 +29,8 @@ forw.addEventListener('click',
         img[active].classList.remove('show');
         active++;
         img[active].classList.add('show');
-        // rimozione bottone
+
+        // Rimozione bottone avanti
         back.classList.remove('hidden');
         if (active == img_arr_l - 1 ) {
             forw.classList.add('hidden');
@@ -42,7 +43,7 @@ back.addEventListener('click',
         img[active].classList.remove('show');
         active--;
         img[active].classList.add('show');
-        // rimozione bottone
+        // Rimozione bottone indietro
         forw.classList.remove('hidden');
         if (active == 0 ) {
             back.classList.add('hidden');

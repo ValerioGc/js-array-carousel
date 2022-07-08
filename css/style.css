@@ -8,31 +8,37 @@
 }
 .show {
     display: block!important;
-}
+    animation: slit-in 0.4s ease-out;}
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: lightgrey;
 }
 #container {
     width: 90vw;
     height: 90vh;
     position: relative;
     margin: auto;
+    box-shadow: inset 5px 5px 50px 75px #626262;
+    border-radius: 25px;
+    background:linear-gradient(to bottom, #575757 0%, #383838 25%, #131313 35%, #000 50%, #131313 65%, #383838 75%, #575757 100%);
 }
 .img {
     display: none;
+}
+#img-carousel {
+    box-shadow: 5px 3px 5px #000;
 }
 #img-carousel,
 .img,
 #img-carousel img {
     width: 100%;
     height: 100%;
-}
-#img-carousel img {
     border-radius: 25px;
 }
+/* Pulsanti Avanti e Indietro */
 #back,
 #forw {
     border-radius: 50%;
@@ -40,8 +46,13 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%) rotate(-90deg);
-    padding: 10px 15px;
     font-size: 20px;
+    opacity: 0.4;
+    box-shadow: -5px 1px 5px #000;
+}
+#forw i,
+#back i {
+    padding: 20px;
 }
 #forw {
     top: 30px;
@@ -49,3 +60,15 @@ body {
 #back {
     bottom: 30px;
 }
+
+/* Effetti Hover */
+#back:hover,
+#forw:hover {
+    opacity: 1;
+    color: blue;
+}
+@keyframes slit-in {
+        0% {transform: translateZ(-800px) rotateX(90deg); opacity: 0;}
+        55% {transform: translateZ(-160px) rotateX(87deg); opacity: 1;}
+        100% {transform: translateZ(0) rotateX(0);}
+    }
