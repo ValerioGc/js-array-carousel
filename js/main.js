@@ -7,7 +7,7 @@ const img_arr = [
     "img/05.jpg"
 ];
 let img_arr_l = img_arr.length;
-// Costruzione Dinamica HTML
+// Costruzione Dinamica HTML 
 let carousel_cont = document.getElementById('img-carousel');
 for (let i = 0; i < img_arr_l; i++) {
     carousel_cont.innerHTML += 
