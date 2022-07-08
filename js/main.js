@@ -17,19 +17,34 @@ for (let i = 0; i < img_arr_l; i++) {
     `;
 }
 const img = document.getElementsByClassName('img');
-
 let active = 0;
 img[active].classList.add('show');
-
-// Event Listner Back
-const back = document.getElementById('back');
-back.addEventListener('click',
-    function() {
-
-    });
-// Event Listner Forw
+// EventListners
 const forw = document.getElementById('forw');
+const back = document.getElementById('back');
+// Event Listner Avanti
 forw.addEventListener('click',
     function () {
-
+        // Spostamento classe
+        img[active].classList.remove('show');
+        active++;
+        img[active].classList.add('show');
+        // rimozione bottone
+        back.classList.remove('hidden');
+        if (active == img_arr_l - 1 ) {
+            forw.classList.add('hidden');
+        }
+    });
+// Event Listner Indietro
+back.addEventListener('click',
+    function () {
+        // Spostamento classe
+        img[active].classList.remove('show');
+        active--;
+        img[active].classList.add('show');
+        // rimozione bottone
+        forw.classList.remove('hidden');
+        if (active == 0 ) {
+            back.classList.add('hidden');
+        }
     });

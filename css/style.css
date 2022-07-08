@@ -4,7 +4,7 @@
     padding: 0;
 }
 .hidden {
-    display: none;
+    display: none!important;
 }
 .show {
     display: block!important;
@@ -38,14 +38,14 @@ body {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.516);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
     padding: 10px 15px;
     font-size: 20px;
 }
-#back {
-    left: 30px;
-}
 #forw {
-    right: 30px;
+    top: 30px;
+}
+#back {
+    bottom: 30px;
 }
