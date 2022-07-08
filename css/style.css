@@ -8,7 +8,11 @@
 }
 .show {
     display: block!important;
-    animation: slit-in 0.4s ease-out;}
+    animation: slit-in 0.4s ease-out;
+}
+ul {
+    list-style-type: none;
+}
 body {
     height: 100vh;
     display: flex;
@@ -60,6 +64,38 @@ body {
 #back {
     bottom: 30px;
 }
+/* Indicatori posizione immagine */
+#position-round {
+    position: absolute;
+    left: 40px;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+.rnd {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.503);
+    border: 2px solid rgb(53, 53, 53);
+    padding: 10px;
+    margin: 10px 0 0;
+    border-radius: 50%;
+}
+.rnd:hover {
+    background-color: grey;
+    border: 2px solid black;
+}
+.rnd:active {
+    background-color: rgb(4, 0, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.rnd-active {
+    transform: scale(1.4);
+    transition: all 1s linear;
+    background-color: #000;
+    border: 2px solid white;
+}
+
 /* Effetti Hover */
 #back:hover,
 #forw:hover {
@@ -70,4 +106,4 @@ body {
         0% {transform: translateZ(-800px) rotateX(90deg); opacity: 0;}
         55% {transform: translateZ(-160px) rotateX(87deg); opacity: 1;}
         100% {transform: translateZ(0) rotateX(0);}
-    }
+}
