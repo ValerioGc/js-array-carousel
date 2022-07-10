@@ -57,3 +57,73 @@ back.addEventListener('click',
             back.classList.add('hidden');
         }
     });
+
+
+
+// Collegamenti preview foto
+const l_prev = document.getElementsByClassName('rnd');
+// Spostamento classe active prima foto
+let dotbtn1 = document.getElementById('r0');
+dotbtn1.addEventListener('click',
+    function () {
+        // Spostamento classe active
+        img[active].classList.remove('show');
+        l_prev[active].classList.remove('rnd-active');
+        active = img_arr_l - 5;
+        forw.classList.remove('hidden');
+        back.classList.add('hidden');
+        img[active].classList.add('show');
+        l_prev[active].classList.add('rnd-active');
+    });
+// Spostamento classe active seconda foto
+let dotbtn2 = document.getElementById('r1');
+dotbtn2.addEventListener('click',
+    function () {
+        // Spostamento classe active
+        img[active].classList.remove('show');
+        l_prev[active].classList.remove('rnd-active');
+        active = img_arr_l - 4;
+        forw.classList.remove('hidden');
+        back.classList.remove('hidden');
+        img[active].classList.add('show');
+        l_prev[active].classList.add('rnd-active');
+    });
+// Spostamento classe active terza foto
+let dotbtn3 = document.getElementById('r2');
+dotbtn3.addEventListener('click',
+    function () {
+        // Spostamento classe active
+        img[active].classList.remove('show');
+        l_prev[active].classList.remove('rnd-active');
+        active = img_arr_l - 3;
+        forw.classList.remove('hidden');
+        back.classList.remove('hidden');
+        img[active].classList.add('show');
+        l_prev[active].classList.add('rnd-active');
+    });
+// Spostamento classe active penultima foto
+let dotbtn4 = document.getElementById('r3');
+dotbtn4.addEventListener('click',
+    function () {
+        // Spostamento classe active
+        img[active].classList.remove('show');
+        l_prev[active].classList.remove('rnd-active');
+        active = img_arr_l - 2;
+        forw.classList.remove('hidden');
+        back.classList.remove('hidden');
+        img[active].classList.add('show');
+        l_prev[active].classList.add('rnd-active');
+    });
+// Spostamento classe active ultima foto
+let dotbtn5 = document.getElementById('r4');
+dotbtn5.addEventListener('click',
+    function () {
+        // Spostamento classe active
+        img[active].classList.remove('show');
+        l_prev[active].classList.remove('rnd-active');
+        active = img_arr_l - 1;
+        forw.classList.add('hidden');
+        back.classList.remove('hidden');
+        img[active].classList.add('show');
+        l_prev[active].classList.add('rnd-active');
+    });
