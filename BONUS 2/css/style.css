@@ -21,7 +21,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: rgb(161, 161, 161);
-}
+} 
 #container {
     width: 95vw;
     height: 95vh;

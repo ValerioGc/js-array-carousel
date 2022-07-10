@@ -17,7 +17,7 @@ for (let i = 0; i < img_arr_l; i++) {
     carousel_cont.innerHTML += 
     `   <li class="img">
             <img src=${img_arr[i]} alt="Immagine ${i + 1}">
-        </li>
+        </li> 
     `;
     cont_l_prev.innerHTML +=
         `   <li class="imgp ovrl">
