@@ -57,9 +57,6 @@ back.addEventListener('click',
             back.classList.add('hidden');
         }
     });
-
-
-
 // Collegamenti preview foto
 const l_prev = document.getElementsByClassName('rnd');
 // Spostamento classe active prima foto
