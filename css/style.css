@@ -64,25 +64,6 @@ body {
 #back {
     bottom: 30px;
 }
-/* Effetti Hover */
-.rnd:hover {
-    background-color: grey;
-    border: 2px solid black;
-}
-.rnd:active {
-    background-color: rgb(4, 0, 255);
-    border: 2px solid rgb(255, 255, 255);
-}
-#back:hover,
-#forw:hover {
-    opacity: 1;
-    color: blue;
-}
-@keyframes slit-in {
-        0% {transform: translateZ(-800px) rotateX(90deg); opacity: 0;}
-        55% {transform: translateZ(-160px) rotateX(87deg); opacity: 1;}
-        100% {transform: translateZ(0) rotateX(0);}
-}
 /* Indicatori posizione immagine */
 #position-round {
     position: absolute;
@@ -94,14 +75,38 @@ body {
     width: 10px;
     height: 10px;
     background-color: rgba(0, 0, 0, 0.503);
-    border: 2px solid rgb(53, 53, 53);
+    border: 2px solid #353535;
     padding: 10px;
     margin: 10px 0 0;
     border-radius: 50%;
 }
+/* Effetti Hover */
+.rnd:hover {
+    background-color: #e3e3e370;
+    border-color: #000;
+}
+.rnd:active {
+    background-color: rgb(49, 49, 49);
+    border-color: #ffffff9b;
+}
+.rnd-active:active,
+.rnd-active:hover {
+    background-color: #0c0250c6;
+    border: 1px solid #fff;
+}
 .rnd-active {
     transform: scale(1.4);
     transition: all 1s linear;
-    background-color: #000;
-    border: 2px solid #fff;
+    background-color: #0c0250c6;
+    border: 1px solid #fff;
+}
+#back:hover,
+#forw:hover {
+    opacity: 1;
+    color: #0000ff;
+}
+@keyframes slit-in {
+        0% {transform: translateZ(-800px) rotateX(90deg); opacity: 0;}
+        55% {transform: translateZ(-160px) rotateX(87deg); opacity: 1;}
+        100% {transform: translateZ(0) rotateX(0);}
 }

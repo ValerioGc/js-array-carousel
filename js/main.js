@@ -20,8 +20,10 @@ for (let i = 0; i < img_arr_l; i++) {
         `<li class="rnd" id=r${i}></li>`;
 }
 const img = document.getElementsByClassName('img');
+const preview_rnd = document.querySelectorAll('#position-round li');
 let active = 0;
 img[active].classList.add('show');
+preview_rnd[active].classList.add('rnd-active');
 // EventListners
 const forw = document.getElementById('forw');
 const back = document.getElementById('back');
@@ -30,12 +32,14 @@ forw.addEventListener('click',
     function () {
         // Spostamento classe
         img[active].classList.remove('show');
+        preview_rnd[active].classList.remove('rnd-active');
         active++;
         img[active].classList.add('show');
+        preview_rnd[active].classList.add('rnd-active');
         // Rimozione bottone avanti
         back.classList.remove('hidden');
         if (active == img_arr_l - 1 ) {
-        forw.classList.add('hidden');
+            forw.classList.add('hidden');
         }
     });
 // Event Listner Indietro
@@ -43,8 +47,10 @@ back.addEventListener('click',
     function () {
         // Spostamento classe
         img[active].classList.remove('show');
+        preview_rnd[active].classList.remove('rnd-active');
         active--;
         img[active].classList.add('show');
+        preview_rnd[active].classList.add('rnd-active');
         // Rimozione bottone indietro
         forw.classList.remove('hidden');
         if (active == 0 ) {
