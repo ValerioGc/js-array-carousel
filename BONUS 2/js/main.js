@@ -24,7 +24,7 @@ for (let i = 0; i < img_arr_l; i++) {
                 <img src=${img_arr[i]} alt="Immagine ${i + 1}">
             </li>
     `;
-}
+} 
 let active = 0;
 img[active].classList.add('show');
 l_prev[active].classList.remove('ovrl');
