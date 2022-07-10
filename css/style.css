@@ -64,6 +64,25 @@ body {
 #back {
     bottom: 30px;
 }
+/* Effetti Hover */
+.rnd:hover {
+    background-color: grey;
+    border: 2px solid black;
+}
+.rnd:active {
+    background-color: rgb(4, 0, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+#back:hover,
+#forw:hover {
+    opacity: 1;
+    color: blue;
+}
+@keyframes slit-in {
+        0% {transform: translateZ(-800px) rotateX(90deg); opacity: 0;}
+        55% {transform: translateZ(-160px) rotateX(87deg); opacity: 1;}
+        100% {transform: translateZ(0) rotateX(0);}
+}
 /* Indicatori posizione immagine */
 #position-round {
     position: absolute;
@@ -80,30 +99,9 @@ body {
     margin: 10px 0 0;
     border-radius: 50%;
 }
-.rnd:hover {
-    background-color: grey;
-    border: 2px solid black;
-}
-.rnd:active {
-    background-color: rgb(4, 0, 255);
-    border: 2px solid rgb(255, 255, 255);
-}
-
 .rnd-active {
     transform: scale(1.4);
     transition: all 1s linear;
     background-color: #000;
-    border: 2px solid white;
-}
-
-/* Effetti Hover */
-#back:hover,
-#forw:hover {
-    opacity: 1;
-    color: blue;
-}
-@keyframes slit-in {
-        0% {transform: translateZ(-800px) rotateX(90deg); opacity: 0;}
-        55% {transform: translateZ(-160px) rotateX(87deg); opacity: 1;}
-        100% {transform: translateZ(0) rotateX(0);}
+    border: 2px solid #fff;
 }
